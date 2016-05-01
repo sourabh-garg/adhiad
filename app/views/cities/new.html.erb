@@ -1,0 +1,21 @@
+
+
+<%= render 'shared/error', obj: @city %>
+<%= form_for @city do |f| %>
+
+<div class="form-group">
+
+	<%= f.label :state_id, "Select State"%>
+	<%= f.collection_select(:state_id, State.all, :id, :state, {},  {class: "form-control selectpicker", "data-live-search" => "true"})%>
+</div><br>
+<div class="form-group">
+	<%= f.label :city, "city Name"%>
+	<%= f.text_field :city, class: "form-control", placeholder: "Enter city name", required: true%>
+	<br>
+</div>
+<div class="form-group">
+	<%= f.submit class: "btn btn-primary"%>
+
+</div>
+<% end %>
+  

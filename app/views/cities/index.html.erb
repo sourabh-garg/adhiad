@@ -1,0 +1,13 @@
+<br><br><br>
+<ul class="list-group">
+
+<% @city.each do |city| %>
+
+<li class="list-group-item"><%= city.state.state %></li>
+<li class="list-group-item"><%= city.city %></li>
+<hr>
+
+
+
+<% end %>
+<ul>

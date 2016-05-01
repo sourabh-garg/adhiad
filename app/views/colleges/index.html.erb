@@ -1,0 +1,14 @@
+<br><br><br>
+<ul class="list-group">
+
+<% @college.each do |college| %>
+
+<li class="list-group-item"><%= college.state.state %></li>
+<li class="list-group-item"><%= college.city.city %></li>
+<li class="list-group-item"><%= college.college %></li>
+<hr>
+
+
+
+<% end %>
+<ul>
