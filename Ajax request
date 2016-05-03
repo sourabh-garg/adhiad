@@ -1,0 +1,17 @@
+Ajax request ------------------
+
+$(document).ready(function(){
+  
+  $('#bt').click(function(){
+  $.ajax({
+    url: '//jsbin.com/xuyis/1.json',
+    type: "GET"
+     }).done(function(json){
+    $('#first').append(json.username);
+    
+  }).fail(function( xhr, status, errorThrown ) {
+    alert( "Sorry, there was a problem!" );
+  });
+  });
+  
+});
