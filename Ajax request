@@ -13,5 +13,18 @@ $(document).ready(function(){
     alert( "Sorry, there was a problem!" );
   });
   });
+  });
+
+
+$(document).ready(function(){
+  
+  $('#bt').click(function(){
+  $.ajax({url: '//jsbin.com/xuyis/1.json',
+          dataType: 'json',
+      success: function(result){
+        console.log(result);
+      }});
+    
+  });
   
 });
